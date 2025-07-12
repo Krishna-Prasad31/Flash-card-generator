@@ -1,0 +1,30 @@
+body{
+  margin: 0px;
+}
+
+header {
+  background-color: #f9f9f9;
+  width: 100%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* light subtle border */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);   /* soft shadow */
+  padding: 16px 0;
+}
+
+
+div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.flashcards{
+  width: 50px;
+}
+
+.title{
+  display: inline-block;
+  margin-left: 12px;
+  word-spacing: -2px;
+  font-family: inter;
+}
