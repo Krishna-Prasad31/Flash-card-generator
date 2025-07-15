@@ -1,0 +1,26 @@
+.input-container{
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+input{
+  width: 400px;
+  height: 35px;
+  border-radius: 20px;
+  font-size: 15px;
+  font-family: inter;
+  padding-left: 12px;
+}
+
+.submit-button{
+  margin-left: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 20px;
+  font-family: inter;
+  border: none;
+  color: white;
+  background-color: black;
+
+}
