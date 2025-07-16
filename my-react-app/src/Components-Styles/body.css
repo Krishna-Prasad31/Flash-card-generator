@@ -1,19 +1,26 @@
 .input-container{
   display: flex;
   justify-content: center;
+  align-items: center;
   margin-top: 50px;
+
 }
+
 
 input{
   width: 400px;
-  height: 35px;
+  height: 40px;
   border-radius: 20px;
   font-size: 15px;
   font-family: inter;
   padding-left: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  border: none;
+  outline: none;
 }
 
 .submit-button{
+  height: 40px;
   margin-left: 20px;
   padding-left: 20px;
   padding-right: 20px;
@@ -24,3 +31,53 @@ input{
   background-color: black;
 
 }
+
+input:focus {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease;
+}
+button:hover {
+  transform: scale(1.05);
+  transition: transform 0.2s ease;
+  background-color: hsl(0, 0%, 30%);
+}
+
+@media (max-width: 600px) {
+  input {
+    width: 80%;
+  }
+}
+
+ul{
+  margin-left: -250px;
+  margin-top: -220px;
+  font-family: inter;
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+
+
+.list-holder{
+  display: flex;
+  background-color: #f9f9f9;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  width: 550px;
+  margin-left: -10px;
+  margin-top: 50px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.big{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
