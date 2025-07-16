@@ -49,13 +49,20 @@ button:hover {
 }
 
 ul{
-  margin-left: -250px;
-  margin-top: -180px;
   font-family: inter;
   font-size: 18px;
   display: flex;
   flex-direction: column;
   gap: 12px;
+  list-style-type: disc;
+
+}
+
+ul li{
+  word-wrap: break-word;       /* ✅ breaks long words */
+  overflow-wrap: anywhere;     /* ✅ forces break even in super-long text */
+  max-width: 100%;             /* ensures it doesn’t go wider than container */
+  white-space: normal; 
 }
 
 
@@ -71,6 +78,10 @@ ul{
   margin-top: 50px;
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  overflow-x: hidden;
+  white-space: normal;
 }
 
 .big{

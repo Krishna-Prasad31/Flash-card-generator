@@ -18,7 +18,7 @@ export default function Body () {
       <div className="input-container">
         <input
           type="text"
-          placeholder="eg: Human Anatomy"
+          placeholder="Learning something new?."
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
         />
@@ -26,7 +26,6 @@ export default function Body () {
           Submit
         </button>
       </div>
-
       <div className="big">
         <div className="list-holder">
           <ul>
