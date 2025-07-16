@@ -20,7 +20,7 @@ export default function Body () {
           </ul>
         </div>
       </div>
-      <div>
+      <div className="final-div">
         <span className="final-call">Would you like to proceed with the Topics?</span>
       <button className="proceed-button">Get Flash Cards</button>
       </div>
