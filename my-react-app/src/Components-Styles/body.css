@@ -70,8 +70,8 @@ ul li{
 .list-holder{
   display: flex;
   background-color: #f9f9f9;
-  justify-content: center;
-  align-items: center;
+  /* justify-content: center; */
+  /* align-items: center; */
   height: 400px;
   width: 550px;
   margin-left: -10px;
