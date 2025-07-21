@@ -1,36 +1,41 @@
 import axios from "axios";
-const apiKey = import.meta.env.VITE_OPENROUTER_API_KEY;
 
+// Replace with your Groq API key from console.groq.com
+const apikey = import.meta.env.VITE_GROQ_API_KEY; // Paste your key here
 
 export const generateFlashcards = async (topics) => {
-  const prompt = `Generate 1 flashcard per topic in the following markdown format:
-### Topic: [topic]
-**Q:** [question]
-**A:** [answer]
----
+  const prompt = `Generate 1 flashcard for the topic:
+
 
 Topics:
 ${topics.join("\n")}`;
 
   try {
     const res = await axios.post(
-      "https://openrouter.ai/api/v1/chat/completions",
+      "https://api.groq.com/openai/v1/chat/completions",
       {
-        model: "openchat/openchat-3.5-1210",
-        messages: [{ role: "user", content: prompt }],
+        model: "llama-3.1-8b-instant", // Fast and free model
+        messages: [
+          {
+            role: "user",
+            content: prompt
+          }
+        ],
+        max_tokens: 1000,
+        temperature: 0.7
       },
       {
         headers: {
-          "Authorization": `Bearer ${apiKey}` , // Replace this
-          "HTTP-Referer": "http://localhost:5173", // or your deployed domain
+          Authorization: `Bearer ${apikey}`,
           "Content-Type": "application/json",
         },
+        timeout: 15000, // 15 seconds - Groq is very fast
       }
     );
-
+    
     return res.data.choices[0].message.content;
   } catch (error) {
-    console.error("AI error:", error);
-    return "⚠️ Failed to generate flashcards.";
+    console.error("AI error:", error.response?.data || error);
+    return "⚠️ Failed to generate flashcards. Please try again.";
   }
 };
