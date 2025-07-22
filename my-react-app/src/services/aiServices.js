@@ -4,7 +4,7 @@ import axios from "axios";
 const apikey = import.meta.env.VITE_GROQ_API_KEY; // Paste your key here
 
 export const generateFlashcards = async (topics) => {
-  const prompt = `Generate 1 flashcard for the topic:
+  const prompt = `Generate one flash cards for each topic displayed on the unordered list
 
 
 Topics:
